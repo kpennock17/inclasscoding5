@@ -17,3 +17,43 @@ const cart = [
 
 // Try: "regular", "student", "member", or "vip"
 const customerType = "member";
+//step 2
+function getCategoryDiscount(category){
+    switch (category) {
+        case "gear":
+            return .1
+            break;
+        case "apparel":
+            return .15
+            break;
+        case "snacks":
+            return .08
+            break;
+        case "access":
+            return .05
+            break;
+        default:
+            return 0
+            break;
+    }
+}
+console.log(getCategoryDiscount("gear"))
+
+function priceAfterCategoryDicosunt(products){
+let rate = getCategoryDiscount(products.category);
+return product.price * (1-rate);
+}
+//step 3
+function findProductById(id){
+    for (let p of products) {
+        if (p.id === id)
+            return p;
+    }
+    return null;
+}
+console.log(findProductById(201))
+
+//step 4 
+function getCustomerAdjustmentsRate(customerType){
+    const product = findProductById(ClipboardItem.productId, products)
+}
